@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Unit Info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img part="unit-thumbnail" [src]="loadedUnit.unitImageUrl"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{ loadedUnit.unitName }}</ion-card-title>
+      <ion-card-subtitle>{{ loadedUnit.unitType }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <!-- True Art Row -->
+        <ion-row>
+          <ion-col size="2">True Art</ion-col>
+          <ion-col size="8">{{ loadedUnit.unitTrueArt }}</ion-col>
+          <ion-col size="2">{{ loadedUnit.unitTABreak }}</ion-col>
+        </ion-row>
+        <!-- Art Row -->
+        <ion-row>
+          <ion-col size="2">Art</ion-col>
+          <ion-col size="8">{{ loadedUnit.unitArt }}</ion-col>
+          <ion-col size="2">{{ loadedUnit.unitArtBreak }}</ion-col>
+        </ion-row>
+        <!-- Skill Row -->
+        <ion-row>
+          <ion-col size="2">Skill</ion-col>
+          <ion-col size="8">{{ loadedUnit.unitSkill }}</ion-col>
+          <ion-col size="2">{{ loadedUnit.unitSkillBreak }}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+    
+</ion-content>

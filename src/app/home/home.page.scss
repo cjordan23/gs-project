@@ -25,3 +25,12 @@
 #container a {
   text-decoration: none;
 }
+
+ion-title{
+  text-align: center;
+}
+
+ion-card {
+  --ion-safe-area-top: 50px;
+  --ion-safe-area-bottom: 50px;
+}

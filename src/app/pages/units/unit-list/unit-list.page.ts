@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Unit } from 'src/app/models/unit.model';
+import { UnitService } from 'src/app/services/unit.service';
 
 @Component({
   selector: 'app-unit-list',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UnitListPage implements OnInit {
 
-  constructor() { }
+  units: Unit[];
+
+  constructor(private unitService: UnitService) { }
 
   ngOnInit() {
+    this.units = this.unitService.getAllUnits();
   }
 
 }

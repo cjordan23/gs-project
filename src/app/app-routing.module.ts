@@ -13,12 +13,13 @@ const routes: Routes = [
   },
   {
     path: 'unit-list',
-    loadChildren: () => import('./pages/unit-list/unit-list.module').then( m => m.UnitListPageModule)
+    loadChildren: () => import('./pages/units/unit-list/unit-list.module').then( m => m.UnitListPageModule)
   },
   {
-    path: 'item-list',
-    loadChildren: () => import('./pages/item-list/item-list.module').then( m => m.ItemListPageModule)
+    path: 'unit-info',
+    loadChildren: () => import('./pages/units/unit-info/unit-info.module').then( m => m.UnitInfoPageModule)
   },
+
 ];
 
 @NgModule({
