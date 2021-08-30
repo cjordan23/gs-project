@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let unit of units">
+    <ion-item *ngFor="let unit of units" rounterLink="['./unit-info/', unit.unitId]">
       <ion-thumbnail>
         <ion-img [src]="unit.unitIconUrl"></ion-img>
       </ion-thumbnail>

@@ -5,21 +5,16 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'unit-list',
-    loadChildren: () => import('./pages/units/unit-list/unit-list.module').then( m => m.UnitListPageModule)
-  },
-  {
-    path: 'unit-info',
-    loadChildren: () => import('./pages/units/unit-info/unit-info.module').then( m => m.UnitInfoPageModule)
-  },
-
+    path: 'pages',
+    loadChildren: () => import('./pages/pages.module').then( m => m.PagesModule)
+  }
 ];
 
 @NgModule({
